@@ -1,0 +1,25 @@
+{
+  "name": "static-site-template",
+  "version": "1.0.0",
+  "description": "A static site template using metalsmith.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node-sass --include-path scss src/main.scss public/main.css",
+    "build:metalsmith": "bash -c \"node index.js\"",
+    "clean": "rm -rf dist",
+    "build:all": "",
+    "watch-css": "nodemon -e scss,html,md -x \"npm run build:css\""
+  },
+  "author": "Julius Rajala",
+  "license": "MIT",
+  "devDependencies": {
+    "metalsmith": "^2.1.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-templates": "^0.7.0",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.0"
+  },
+  "dependencies": {
+    "metalsmith": "^2.1.0"
+  }
+}
