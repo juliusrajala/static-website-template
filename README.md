@@ -6,10 +6,8 @@ The generator uses markdown and handlebars to produce html-files using metalsmit
 
 ## Usage
 
-<code>
   - Place html layouts for pages into src/layouts
   - Scss anywhere under src/ as per preference.
 
-  Running:
-  npm start // Starts http-server and runs the build scripts
-</code>
+## Running:
+npm start // Starts http-server and runs the build scripts
