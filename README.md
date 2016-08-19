@@ -1,4 +1,4 @@
-# Static site blueprint
+# Static site template
 
 This is a static website generator setup built for crafting simple website projects.
 
