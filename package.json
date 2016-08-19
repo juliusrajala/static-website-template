@@ -4,16 +4,22 @@
   "description": "A static site template using metalsmith.",
   "main": "index.js",
   "scripts": {
-    "build:css": "node-sass --include-path scss src/main.scss public/main.css",
-    "build:metalsmith": "bash -c \"node index.js\"",
+    "build:css": "node-sass --include-path scss src/main.scss dist/css/styles.css",
+    "build:metalsmith": "bash -c \"node build.js\"",
     "clean": "rm -rf dist",
-    "build:all": "",
-    "watch-css": "nodemon -e scss,html,md -x \"npm run build:css\""
+    "server": "http-server dist",
+    "build:all": "npm run clean && (npm run build:metalsmith && npm run build:css )",
+    "watch": "nodemon --ignore dist/ -e scss,html,md -x \"npm run build:all\"",
+    "start": "bash -c \"(npm run server & npm run watch)\""
   },
   "author": "Julius Rajala",
   "license": "MIT",
   "devDependencies": {
+    "handlebars": "^4.0.5",
+    "http-server": "^0.9.0",
     "metalsmith": "^2.1.0",
+    "metalsmith-filter": "^1.0.2",
+    "metalsmith-layouts": "^1.6.5",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-templates": "^0.7.0",
     "node-sass": "^3.8.0",
