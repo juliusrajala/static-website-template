@@ -10,4 +10,7 @@ The generator uses markdown and handlebars to produce html-files using metalsmit
   - Scss anywhere under src/ as per preference.
 
 ## Running:
-npm start // Starts http-server and runs the build scripts
+ - npm install: Installs dependencies
+- npm start: Starts http-server and runs the build scripts
+
+License: MIT
