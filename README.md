@@ -10,7 +10,8 @@ The generator uses markdown and handlebars to produce html-files using metalsmit
 - The build scripts should now enable using es6 syntax in javascript, output will be uglified.
 
 ## Running:
+You need nodejs to get the build running smoothly. After the project has been build, dist can be served via any http-server. The start-script of this repo also starts a http-server that serves the files from dist.
+
 - npm install: Installs dependencies
 - npm start: Starts http-server and runs the build scripts
-
-License: MIT
+- Navigate to localhost:8080
