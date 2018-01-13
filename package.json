@@ -4,15 +4,17 @@
   "description": "A static site template using metalsmith.",
   "main": "index.js",
   "scripts": {
-    "build:css": "node-sass --include-path scss src/main.scss dist/css/styles.css",
+    "build:css": "node-sass --include-path scss src/main.scss dist/styles.css",
     "build:metalsmith": "bash -c \"node build.js\"",
     "build:js": "bash -c \"browserify src/main.js -o dist/bundle.js -t [ babelify --presets [ es2015] ] && npm run uglify\"",
+    "copy:assets": "shx mkdir -p dist/ && cp -r src/assets/* dist/",
     "uglify": "uglifyjs --compress --mangle -- dist/bundle.js > dist/bundle.min.js && rm dist/bundle.js",
     "clean": "rm -rf dist",
     "server": "http-server dist",
-    "build:all": "npm run clean && (npm run build:metalsmith && npm run build:css && npm run build:js )",
-    "watch": "nodemon --ignore dist/ -e scss,html,md,js -x \"npm run build:all\"",
-    "start": "bash -c \"(npm run server & npm run watch)\""
+    "build:all": "npm run clean && (npm run build:css && npm run build:js && npm run copy:assets && npm run build:metalsmith)",
+    "watch": "nodemon --ignore dist/ -e scss,html,md,js,jsx -x \"npm run build:all\"",
+    "dev": "bash -c \"(npm run server & npm run watch)\"",
+    "start": "bash -c \"(npm run build:all && npm run server)\""
   },
   "author": "Julius Rajala",
   "license": "MIT",
