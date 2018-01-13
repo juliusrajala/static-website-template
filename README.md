@@ -27,3 +27,7 @@ You need nodejs to get the build running smoothly. After the project has been bu
 - npm install: Installs dependencies
 - npm start: Starts http-server and runs the build scripts
 - Navigate to localhost:8080 on your browser
+
+## License
+
+MIT 2018 Julius Rajala
