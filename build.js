@@ -2,14 +2,14 @@ const metalsmith = require('metalsmith');
 const markdown = require('metalsmith-markdown');
 const filter = require('metalsmith-filter');
 const layouts = require('metalsmith-layouts');
-const handlebarHelpers = require('./lib/handlebarHelpers');
+const handlebarsHelpers = require('./lib/handlebarsHelpers');
 
 
 metalsmith(__dirname)
   .source('./src/content/')
   .destination('dist/')
   .use(markdown())
-  .use(handlebarHelpers())
+  .use(handlebarsHelpers())
   .use(layouts({
     'engine':'handlebars', 
     'directory':'src/layouts',
