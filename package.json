@@ -11,7 +11,7 @@
     "uglify": "uglifyjs --compress --mangle -- dist/bundle.js > dist/bundle.min.js && rm dist/bundle.js",
     "clean": "rm -rf dist",
     "server": "http-server dist",
-    "build:all": "npm run clean && (npm run build:css && npm run build:js && npm run copy:assets && npm run build:metalsmith)",
+    "build:all": "npm run clean && (npm run build:metalsmith && npm run build:css && npm run build:js && npm run copy:assets)",
     "watch": "nodemon --ignore dist/ -e scss,html,md,js,jsx -x \"npm run build:all\"",
     "dev": "bash -c \"(npm run server & npm run watch)\"",
     "start": "bash -c \"(npm run build:all && npm run server)\""
