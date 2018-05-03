@@ -25,7 +25,7 @@ src/scripts/    # Suggestion for storing javascript files.
 You need nodejs to get the build running smoothly. After the project has been build, dist can be served via any http-server. The start-script of this repo also starts a http-server that serves the files from dist.
 
 1. `$ npm install` Installs dependencies
-2. `$ npm start` Starts http-server and runs the build scripts
+2. `$ npm run dev` Starts development server and builds project
 3. Navigate to localhost:8080 on your browser
 
 ## License
