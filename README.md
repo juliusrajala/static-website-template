@@ -26,7 +26,7 @@ You need nodejs to get the build running smoothly. After the project has been bu
 
 1. `$ npm install` Installs dependencies
 2. `$ npm run dev` Starts development server and builds project
-3. Navigate to localhost:8080 on your browser
+3. Navigate to `http://localhost:8080` on your browser
 
 ## License
 
